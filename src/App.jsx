@@ -1,34 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import GeneralForm from './components/GeneralForm'
+import Report from './components/Report'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [ general, setGeneral ] = useState(
+    {
+      fullName: 'Yi-Chun Chen',
+      email: 'elsiechen915@gmail.com',
+      phone: '+1 860 334 9876',
+      address: 'Central, SC, USA'
+    })
+  
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='container'>
+      <div className='forms'>
+        <GeneralForm general={general} 
+          nameChange={(e) => setGeneral({...general, fullName: e.target.value})}
+          emailChange={(e) => setGeneral({...general, email: e.target.value})}
+          phoneChange={(e) => setGeneral({...general, phone: e.target.value})}
+          addressChange={(e) => setGeneral({...general, address: e.target.value})}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='report'>
+        <Report general={general}/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 

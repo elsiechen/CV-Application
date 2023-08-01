@@ -1,0 +1,27 @@
+.form {
+    width: 500px;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+label {
+    display: block;
+    font-size: 5px;
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #dddcdc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    height: 1.3rem;
+    padding: 1rem 0.5rem;
+    background-color: rgba(14,55,78,.07);
+}
