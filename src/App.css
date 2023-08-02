@@ -9,7 +9,7 @@
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   min-height: 100vh;
 }
 
