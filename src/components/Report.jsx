@@ -1,3 +1,4 @@
+import './components.css'
 import emailImg from '/email.png'
 import phoneImg from '/phone.png'
 import addressImg from '/address.png'
