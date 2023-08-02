@@ -24,7 +24,7 @@ export default function Report({general}) {
                 </div>
             </div>
             <div className="education">
-
+                
             </div>
             <div className="experience">
 

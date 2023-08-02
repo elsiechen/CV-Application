@@ -64,3 +64,11 @@ img {
     width: 40px;
     height: 40px;
 }
+
+hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Set the height of the horizontal rule */
+    background-color: rgba(14,55,78,.07); /* Set the color of the horizontal rule */
+    background-color: black;
+    margin: 5px; /* Add some margin above and below the horizontal rule */
+}

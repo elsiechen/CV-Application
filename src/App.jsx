@@ -33,6 +33,13 @@ function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
   const [ educations, setEducations ] = useState(initialEducations);
   
+  const schoolChange = (e, school) => {
+    setEducations(educations.map(education => {
+      return (education.school === school)?
+        {...education, school: e.target.value}: education
+    }))
+  }
+
   return (
     <div className='container'>
       <div className='forms'>
@@ -41,7 +48,8 @@ function App() {
           emailChange={(e) => setGeneral({...general, email: e.target.value})}
           phoneChange={(e) => setGeneral({...general, phone: e.target.value})}
           addressChange={(e) => setGeneral({...general, address: e.target.value})}/>
-        <EducationForm educations={educations} />
+        <EducationForm educations={educations} 
+          schoolChange={schoolChange}/>
       </div>
       <div className='report'>
         <Report general={general}/>
