@@ -3,6 +3,7 @@ import './App.css'
 import GeneralForm from './components/GeneralForm'
 import Report from './components/Report'
 import EducationForm from './components/EducationForm'
+import { v4 as uuid } from 'uuid'
 
 function App() {
   const initialGeneral = {
@@ -13,7 +14,8 @@ function App() {
   };
 
   const initialEducations = [
-    {
+    { 
+      id: uuid(),
       school: 'The Odin Projectat',
       degree: 'Web Developer in JavaScript',
       field: '',
@@ -33,12 +35,24 @@ function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
   const [ educations, setEducations ] = useState(initialEducations);
   
-  const schoolChange = (e, school) => {
+  const schoolChange = (e, id) => {
+    console.log(e.target)
+    e.preventDefault();
     setEducations(educations.map(education => {
-      return (education.school === school)?
+      return (education.id === id)?
         {...education, school: e.target.value}: education
     }))
   }
+
+  // const handleSubmit = (e, item) => {
+  //   e.preventDefault();
+  //   setEducations(educations.map(education => {
+  //     console.log(e.target)
+  //     return (education === item)?
+  //       {...education, school: e.target[0].value
+  //         degree: e.target[1].value}: education
+  //   }))
+  // }
 
   return (
     <div className='container'>
@@ -52,7 +66,8 @@ function App() {
           schoolChange={schoolChange}/>
       </div>
       <div className='report'>
-        <Report general={general}/>
+        <Report general={general} 
+                educations={educations}/>
       </div>
     </div>
   )

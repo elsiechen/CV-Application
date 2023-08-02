@@ -5,16 +5,16 @@ export default function EducationForm(
         educations,
         schoolChange 
     }
-) {
+) { 
     return (
         <div className="form">
             <h3>Education</h3>
             {educations.map(education => (
-                <form key={education.school}>
+                <form key={education.id}>
                     <div className="field">
                         <label htmlFor='school'>School</label>
                         <input value={education.school}
-                                onChange={schoolChange}
+                                onChange={(e) => schoolChange(e, education.id)}
                                 id='school'/>
                     </div>
                     <div className="field">

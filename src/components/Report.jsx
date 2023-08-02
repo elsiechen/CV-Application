@@ -3,7 +3,7 @@ import emailImg from '/email.png'
 import phoneImg from '/phone.png'
 import addressImg from '/address.png'
 
-export default function Report({general}) {
+export default function Report({ general, educations}) {
     return (
         <div className="report-container">
             <div className="head">
@@ -24,7 +24,12 @@ export default function Report({general}) {
                 </div>
             </div>
             <div className="education">
-                
+                <div className="header">Education</div>
+                {educations.map(education => (
+                    <div className="educationItem" key={education.school}>
+                        {education.school}
+                    </div>
+                ))}
             </div>
             <div className="experience">
 

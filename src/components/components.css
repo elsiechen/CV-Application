@@ -33,6 +33,7 @@ form>div:has(input:focus) label {
 .report-container {
     background-color: white;
     width: 800px;
+    min-height: 100vh;
     /* padding: 0.5rem 1rem; */
     margin: 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -71,4 +72,24 @@ hr {
     background-color: rgba(14,55,78,.07); /* Set the color of the horizontal rule */
     background-color: black;
     margin: 5px; /* Add some margin above and below the horizontal rule */
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    width: 90%;
+    background-color: rgba(14,55,78,.07); /* Set the color of the horizontal rule */
+    margin: 1rem;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.educationItem {
+    margin-bottom: 1rem;
 }
