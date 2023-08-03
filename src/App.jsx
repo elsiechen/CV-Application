@@ -9,16 +9,34 @@ function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
   const [ educations, setEducations ] = useState(initialEducations);
   
-  const schoolChange = (e, id) => {
-    console.log(e.target)
+  const handleChange = (e, id) => {
     e.preventDefault();
     setEducations(educations.map(education => {
-      return (education.id === id)?
-        {...education, school: e.target.value}: education
+      const key = e.target.id;
+      let updatedObject;
+      switch (key) {
+        case 'school':
+          updatedObject =  {...education, school: e.target.value};
+          break;
+        case 'degree':
+          updatedObject =  {...education, degree: e.target.value};
+          break;  
+        case 'field':
+            updatedObject =  {...education, field: e.target.value};
+            break; 
+        case 'startDate':
+            updatedObject =  {...education, startDate: e.target.value};
+            break; 
+        case 'endDate':
+            updatedObject =  {...education, endDate: e.target.value};
+            break;
+        case 'location':
+            updatedObject =  {...education, location: e.target.value};
+            break;
+      }
+      return (education.id === id)? updatedObject : education
     }))
   }
-
-  
 
   return (
     <div className='container'>
@@ -29,7 +47,7 @@ function App() {
           phoneChange={(e) => setGeneral({...general, phone: e.target.value})}
           addressChange={(e) => setGeneral({...general, address: e.target.value})}/>
         <EducationForm educations={educations} 
-          schoolChange={schoolChange}/>
+          handleChange={handleChange}/>
       </div>
       <div className='report'>
         <Report general={general} 

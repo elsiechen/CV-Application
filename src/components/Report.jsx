@@ -28,6 +28,8 @@ export default function Report({ general, educations}) {
                 {educations.map(education => (
                     <div className="educationItem" key={education.school}>
                         {education.school}
+                        {' '}
+                        {education.degree}
                     </div>
                 ))}
             </div>

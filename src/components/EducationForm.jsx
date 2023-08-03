@@ -3,7 +3,7 @@ import './components.css'
 export default function EducationForm(
     {
         educations,
-        schoolChange 
+        handleChange 
     }
 ) { 
     return (
@@ -14,13 +14,13 @@ export default function EducationForm(
                     <div className="field">
                         <label htmlFor='school'>School</label>
                         <input value={education.school}
-                                onChange={(e) => schoolChange(e, education.id)}
+                                onChange={(e) => handleChange(e, education.id)}
                                 id='school'/>
                     </div>
                     <div className="field">
                         <label htmlFor='degree'>Degree</label>
                         <input value={education.degree}
-                                // onChange={degreeChange}
+                                onChange={(e) => handleChange(e, education.id)}
                                 id='degree'/>
                     </div>
                     {(educations.indexOf(education) !== educations.length-1)?<hr/> : ''}
