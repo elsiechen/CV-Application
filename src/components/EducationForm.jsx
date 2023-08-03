@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './components.css'
-import collapseArrow from '/collapse-arrow.png'
-import expandArrow from '/expand-arrow.png'
+import ToggleBtn from './ToggleBtn';
+
 
 export default function EducationForm(
     {
@@ -22,10 +22,7 @@ export default function EducationForm(
         <div className="form">
             <div className='toggleContainer'>
                 <h3>Education</h3>
-                <button type="button" className='toggle'
-                    onClick={handleToggle}>
-                    <img src={isVisible ? collapseArrow : expandArrow} alt="Expand arrow"/>
-                </button>
+                <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
             </div>
             
             {educations.map(education => (

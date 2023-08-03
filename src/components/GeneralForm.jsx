@@ -1,4 +1,6 @@
 import './components.css'
+import { useState } from 'react';
+import ToggleBtn from './ToggleBtn';
 
 export default function GeneralForm(
     {
@@ -8,11 +10,20 @@ export default function GeneralForm(
         phoneChange,
         addressChange
     }
-) {
+) { 
+    const [ isVisible, setIsVisible ] = useState(false);
+
+    const handleToggle = () => {
+        setIsVisible(!isVisible);
+    } 
+
     return (
         <div className="form">
-            <h3>General Information</h3>
-            <form>
+            <div className='toggleContainer'>
+                <h3>General Information</h3>
+                <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
+            </div>
+            {isVisible && <form>
                 <div className="field">
                     <label htmlFor='fullName'>Full Name</label>
                     <input value={general.fullName}
@@ -37,7 +48,7 @@ export default function GeneralForm(
                             onChange={addressChange}
                             id='address'/>
                 </div>
-            </form>
+            </form>}
         </div>
         
     )
