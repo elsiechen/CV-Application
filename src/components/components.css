@@ -78,12 +78,13 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 1rem;
 }
 
 .header {
-    width: 90%;
+    width: 95%;
     background-color: rgba(14,55,78,.07); /* Set the color of the horizontal rule */
-    margin: 1rem;
+    /* margin: 1rem; */
     padding: 0.3rem 1rem;
     text-align: center;
     font-size: 1rem;
@@ -92,4 +93,9 @@ hr {
 
 .educationItem {
     margin-bottom: 1rem;
+    display: flex;
+}
+
+.left {
+    margin-right: 2rem;
 }

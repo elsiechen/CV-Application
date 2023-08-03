@@ -26,10 +26,15 @@ export default function Report({ general, educations}) {
             <div className="education">
                 <div className="header">Education</div>
                 {educations.map(education => (
-                    <div className="educationItem" key={education.school}>
-                        {education.school}
-                        {' '}
-                        {education.degree}
+                    <div className="educationItem" key={education.id}>
+                        <div className="left">
+                            <div>{education.startDate}{'~'}{education.endDate}</div>
+                            <div>{education.location}</div>
+                        </div>
+                        <div className="right">
+                            <div><b>{education.school}</b></div>
+                            <div>{education.degree}{'/'}{education.field}</div>
+                        </div>
                     </div>
                 ))}
             </div>

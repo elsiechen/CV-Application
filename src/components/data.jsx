@@ -12,7 +12,7 @@ export  const initialEducations = [
       id: uuid(),
       school: 'The Odin Projectat',
       degree: 'Web Developer in JavaScript',
-      field: '',
+      field: 'Front-End',
       startDate: new Date(2022,2,1).toISOString().slice(0, 10),
       endDate: new Date().toISOString().slice(0, 10),
       location: 'Online'
