@@ -13,8 +13,8 @@ export  const initialEducations = [
       school: 'The Odin Projectat',
       degree: 'Web Developer in JavaScript',
       field: '',
-      startDate: 'March 2022',
-      endDate: 'Present',
+      startDate: new Date(2022,2,1).toISOString().slice(0, 10),
+      endDate: new Date().toISOString().slice(0, 10),
       location: 'Online'
     },
     {
@@ -22,8 +22,8 @@ export  const initialEducations = [
       school: 'National Chenchi University',
       degree: 'Bachelor',
       field: 'Economics',
-      startDate: 'September 2006',
-      endDate: 'June 2010',
+      startDate: new Date(2006,8,1).toISOString().slice(0, 10),
+      endDate: new Date(2010,6,30).toISOString().slice(0, 10),
       location: 'TAIPEI CITY, TAIWAN'
     }
   ]
