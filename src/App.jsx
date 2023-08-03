@@ -3,7 +3,6 @@ import './App.css'
 import GeneralForm from './components/GeneralForm'
 import Report from './components/Report'
 import EducationForm from './components/EducationForm'
-
 import { initialGeneral, initialEducations } from './components/data'
 
 function App() {
@@ -19,15 +18,7 @@ function App() {
     }))
   }
 
-  // const handleSubmit = (e, item) => {
-  //   e.preventDefault();
-  //   setEducations(educations.map(education => {
-  //     console.log(e.target)
-  //     return (education === item)?
-  //       {...education, school: e.target[0].value
-  //         degree: e.target[1].value}: education
-  //   }))
-  // }
+  
 
   return (
     <div className='container'>
