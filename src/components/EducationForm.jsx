@@ -22,13 +22,16 @@ export default function EducationForm(
         <div className="form">
             <div className='toggleContainer'>
                 <h3>Education</h3>
-                <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
+                {/* <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/> */}
             </div>
             
             {educations.map(education => (
-                isVisible && <form key={education.id}>
-                    {console.log(education['startDate'])}
-                    {console.log(education['endDate'])}
+                <>
+                <div className='toggleContainer'>
+                    <h3>{education.school}</h3>
+                    <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
+                </div>
+                {isVisible && <form key={education.id}>
                     {keyItems.map(keyItem => (
                         <div className="field" key={keyItem}>
                             <label htmlFor={keyItem}>{keyItem}</label>
@@ -47,7 +50,8 @@ export default function EducationForm(
                         </div>
                     ))}
                     {(educations.indexOf(education) !== educations.length-1)?<hr/> : ''}
-                </form>
+                </form>}
+                </>
             ))}
         </div>
     )

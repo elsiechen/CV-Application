@@ -1,5 +1,6 @@
 import collapseArrow from '/collapse-arrow.png'
 import expandArrow from '/expand-arrow.png'
+import './components.css'
 
 export default function ToggleBtn({ isVisible, handleToggle}) {
     return (
