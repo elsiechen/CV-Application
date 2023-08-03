@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import './components.css'
+import collapseArrow from '/collapse-arrow.png'
+import expandArrow from '/expand-arrow.png'
 
 export default function EducationForm(
     {
@@ -9,11 +12,24 @@ export default function EducationForm(
     const keyItems = ['school', 'degree', 'field', 'location'];
     const keyItems2 = ['startDate', 'endDate'];
     
+    const [ isVisible, setIsVisible ] = useState(false);
+
+    const handleToggle = () => {
+        setIsVisible(!isVisible);
+    } 
+
     return (
         <div className="form">
-            <h3>Education</h3>
+            <div className='toggleContainer'>
+                <h3>Education</h3>
+                <button type="button" className='toggle'
+                    onClick={handleToggle}>
+                    <img src={isVisible ? collapseArrow : expandArrow} alt="Expand arrow"/>
+                </button>
+            </div>
+            
             {educations.map(education => (
-                <form key={education.id}>
+                isVisible && <form key={education.id}>
                     {console.log(education['startDate'])}
                     {console.log(education['endDate'])}
                     {keyItems.map(keyItem => (

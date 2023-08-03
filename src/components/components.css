@@ -99,3 +99,17 @@ hr {
 .left {
     margin-right: 2rem;
 }
+
+.toggleContainer {
+    display: flex;
+}
+
+.toggle {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.toggle:hover {
+    cursor: pointer;
+}
