@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './components.css'
-import ToggleBtn from './ToggleBtn';
-import deleteImg from '/delete.png'
+import  ToggleBtn  from './ToggleBtn'
+import DeleteBtn from './DeleteBtn';
 
 export default function EducationForm(
     {
@@ -30,10 +30,7 @@ export default function EducationForm(
                 <>
                 <div className='toggleContainer'>
                     <h3>{education.school}</h3>
-                    <button type="button" className='deleteBtn'
-                         onClick={(e) => handleDelete(education.id)}>
-                        <img src={deleteImg} alt="Delete button" />
-                    </button>
+                    <DeleteBtn handleDelete={handleDelete} education={education}/>
                 </div>
                 {isVisible && <form key={education.id}>
                     {keyItems.map(keyItem => (

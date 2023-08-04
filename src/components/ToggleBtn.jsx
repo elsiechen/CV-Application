@@ -6,7 +6,7 @@ export default function ToggleBtn({ isVisible, handleToggle}) {
     return (
         <button type="button" className='toggle'
                     onClick={handleToggle}>
-                    <img src={isVisible ? collapseArrow : expandArrow} alt="Expand arrow"/>
+            <img src={isVisible ? collapseArrow : expandArrow} alt="Expand arrow"/>
         </button>
     )
 }
