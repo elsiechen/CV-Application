@@ -119,4 +119,10 @@ hr {
     margin-left: auto;
     border: none;
     cursor: pointer;
+    
+}
+
+.deleteBtn>img {
+    width:35px;
+    height: auto;
 }
