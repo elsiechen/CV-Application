@@ -22,14 +22,14 @@ export default function EducationForm(
         <div className="form">
             <div className='toggleContainer'>
                 <h3>Education</h3>
-                {/* <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/> */}
+                <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
             </div>
             
             {educations.map(education => (
                 <>
                 <div className='toggleContainer'>
                     <h3>{education.school}</h3>
-                    <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
+                    {/* <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/> */}
                 </div>
                 {isVisible && <form key={education.id}>
                     {keyItems.map(keyItem => (
