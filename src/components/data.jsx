@@ -27,3 +27,31 @@ export  const initialEducations = [
       location: 'TAIPEI CITY, TAIWAN'
     }
   ]
+
+export const initialWorks = [
+  {
+    id: uuid(),
+    company: 'Taiwan Cooperative Bank',
+    position: 'Foreign Exchange Specialist',
+    description: 
+      `Conducts foreign currency transactions for clients.${<br/>}
+      Build local exchange rates for retail customers based on market fluctuations.${<br/>}
+      Recommends products based on foreign exchange rate.`          
+    ,
+    startDate: new Date(2012,9,1).toISOString().slice(0, 10),
+    endDate: new Date(2015,6,30).toISOString().slice(0, 10),
+    location: 'TAIPEI CITY, TAIWAN'
+  },
+  {
+    id: uuid(),
+    company: 'Graduate Institute of Communication Engineering, National Taiwan University',
+    position: 'Administration Assistant',
+    description: 
+      `Track expenses and reimbursement claims of projects in Professor Chen's laboratory.${<br/>}
+      Help holding international conference.`
+    ,
+    startDate: new Date(2010,9,1).toISOString().slice(0, 10),
+    endDate: new Date(2012,8,30).toISOString().slice(0, 10),
+    location: 'TAIPEI CITY, TAIWAN'
+  }
+]

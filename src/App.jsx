@@ -3,13 +3,15 @@ import './App.css'
 import GeneralForm from './components/GeneralForm'
 import Report from './components/Report'
 import EducationForm from './components/EducationForm'
-import { initialGeneral, initialEducations } from './components/data'
+import { initialGeneral, initialEducations, initialWorks } from './components/data'
 import { v4 as uuid } from 'uuid'
+import WorkForm from './components/WorkForm'
 
 function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
   const [ educations, setEducations ] = useState(initialEducations);
-  
+  const [ works, setWorks ] = useState(initialWorks);
+
   const handleDelete = (id) => {
     const newEducations = educations.filter(education => {
       return education.id !== id;
@@ -59,6 +61,55 @@ function App() {
     }))
   }
 
+  const handleWorkDelete = (id) => {
+    const newWorks = works.filter(work => {
+      return work.id !== id;
+    })
+    setWorks(newWorks);
+  }
+
+  const handleNewWorkForm = () => {
+    const newWork = {
+      id: uuid(),
+      company: '',
+      position: '',
+      description: '',
+      startDate: '',
+      endDate: '',
+      location: ''
+    };
+    setWorks([...works, newWork]);
+  }
+
+  const handleWorkChange = (e, id) => {
+    e.preventDefault();
+    setWorks(works.map(work => {
+      const key = e.target.id;
+      let updatedObject;
+      switch (key) {
+        case 'company':
+          updatedObject =  {...work, company: e.target.value};
+          break;
+        case 'position':
+          updatedObject =  {...work, position: e.target.value};
+          break;  
+        case 'description':
+            updatedObject =  {...work, description: e.target.value};
+            break; 
+        case 'startDate':
+            updatedObject =  {...work, startDate: e.target.value};
+            break; 
+        case 'endDate':
+            updatedObject =  {...work, endDate: e.target.value};
+            break;
+        case 'location':
+            updatedObject =  {...work, location: e.target.value};
+            break;
+      }
+      return (work.id === id)? updatedObject : work
+    }))
+  }
+
   return (
     <div className='container'>
       <div className='forms'>
@@ -71,6 +122,10 @@ function App() {
           handleChange={handleChange}
           handleDelete={handleDelete}
           handleNewEduForm={handleNewEduForm}/>
+        <WorkForm works={works}
+          handleChange={handleWorkChange}
+          handleDelete={handleWorkDelete}
+          handleNewWorkForm={handleNewWorkForm} />
       </div>
       <div className='report'>
         <Report general={general} 
