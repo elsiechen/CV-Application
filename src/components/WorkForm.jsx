@@ -55,7 +55,7 @@ export default function WorkForm(
                             <label htmlFor='description'>description</label>
                             <textarea value={work.description}
                                 onChange={(e) => handleWorkChange(e, work.id)}
-                                id='description'/>
+                                id='description' rows='6' cols='50'/>
                     </div>
                     {(works.indexOf(work) !== works.length-1)?<hr/> : ''}
                     </form>}
