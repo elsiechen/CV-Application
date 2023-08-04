@@ -31,7 +31,7 @@ export default function WorkForm(
                 <>
                     <div className='toggleContainer'>
                         <h3>{work.company}</h3>
-                        <DeleteBtn handleDelete={handleWorkDelete} work={work}/>
+                        <DeleteBtn handleDelete={handleWorkDelete} item={work}/>
                     </div>
                     {isVisible && <form key={work.id}>
                     {keyItems.map(keyItem => (

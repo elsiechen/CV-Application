@@ -31,7 +31,7 @@ export default function EducationForm(
                 <>
                     <div className='toggleContainer'>
                         <h3>{education.school}</h3>
-                        <DeleteBtn handleDelete={handleDelete} education={education}/>
+                        <DeleteBtn handleDelete={handleDelete} item={education}/>
                     </div>
                     {isVisible && <form key={education.id}>
                         {keyItems.map(keyItem => (

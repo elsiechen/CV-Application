@@ -123,8 +123,8 @@ function App() {
           handleDelete={handleDelete}
           handleNewEduForm={handleNewEduForm}/>
         <WorkForm works={works}
-          handleChange={handleWorkChange}
-          handleDelete={handleWorkDelete}
+          handleWorkChange={handleWorkChange}
+          handleWorkDelete={handleWorkDelete}
           handleNewWorkForm={handleNewWorkForm} />
       </div>
       <div className='report'>
