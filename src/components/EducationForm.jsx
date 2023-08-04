@@ -6,8 +6,9 @@ import DeleteBtn from './DeleteBtn';
 export default function EducationForm(
     {
         educations,
-        handleChange ,
-        handleDelete
+        handleChange,
+        handleDelete,
+        handleNewEduForm
     }
 ) { 
     const keyItems = ['school', 'degree', 'field', 'location'];
@@ -28,32 +29,35 @@ export default function EducationForm(
             
             {educations.map(education => (
                 <>
-                <div className='toggleContainer'>
-                    <h3>{education.school}</h3>
-                    <DeleteBtn handleDelete={handleDelete} education={education}/>
-                </div>
-                {isVisible && <form key={education.id}>
-                    {keyItems.map(keyItem => (
-                        <div className="field" key={keyItem}>
-                            <label htmlFor={keyItem}>{keyItem}</label>
-                            <input value={education[keyItem]}
-                                    onChange={(e) => handleChange(e, education.id)}
-                                    id={keyItem}/>
-                        </div>
-                    ))}
-                    {keyItems2.map(keyItem => (
-                        <div className="field" key={keyItem}>
-                            <label htmlFor={keyItem}>{keyItem}</label>
-                            <input defaultValue={education[keyItem]}
-                                    onChange={(e) => handleChange(e, education.id)}
-                                    id={keyItem}
-                                    type='date'/>
-                        </div>
-                    ))}
-                    {(educations.indexOf(education) !== educations.length-1)?<hr/> : ''}
-                </form>}
+                    <div className='toggleContainer'>
+                        <h3>{education.school}</h3>
+                        <DeleteBtn handleDelete={handleDelete} education={education}/>
+                    </div>
+                    {isVisible && <form key={education.id}>
+                        {keyItems.map(keyItem => (
+                            <div className="field" key={keyItem}>
+                                <label htmlFor={keyItem}>{keyItem}</label>
+                                <input value={education[keyItem]}
+                                        onChange={(e) => handleChange(e, education.id)}
+                                        id={keyItem}/>
+                            </div>
+                        ))}
+                        {keyItems2.map(keyItem => (
+                            <div className="field" key={keyItem}>
+                                <label htmlFor={keyItem}>{keyItem}</label>
+                                <input defaultValue={education[keyItem]}
+                                        onChange={(e) => handleChange(e, education.id)}
+                                        id={keyItem}
+                                        type='date'/>
+                            </div>
+                        ))}
+                        {(educations.indexOf(education) !== educations.length-1)?<hr/> : ''}
+                    </form>}
                 </>
             ))}
+            <button type='button' onClick={() => {
+                handleNewEduForm();
+                setIsVisible(true)}}>+ Education</button>
         </div>
     )
 }

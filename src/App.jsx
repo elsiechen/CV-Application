@@ -4,6 +4,7 @@ import GeneralForm from './components/GeneralForm'
 import Report from './components/Report'
 import EducationForm from './components/EducationForm'
 import { initialGeneral, initialEducations } from './components/data'
+import { v4 as uuid } from 'uuid'
 
 function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
@@ -14,6 +15,19 @@ function App() {
       return education.id !== id;
     })
     setEducations(newEducations);
+  }
+
+  const handleNewEduForm = () => {
+    const newEudcation = {
+      id: uuid(),
+      school: '',
+      degree: '',
+      field: '',
+      startDate: '',
+      endDate: '',
+      location: ''
+    };
+    setEducations([...educations, newEudcation]);
   }
 
   const handleChange = (e, id) => {
@@ -55,7 +69,8 @@ function App() {
           addressChange={(e) => setGeneral({...general, address: e.target.value})}/>
         <EducationForm educations={educations} 
           handleChange={handleChange}
-          handleDelete={handleDelete}/>
+          handleDelete={handleDelete}
+          handleNewEduForm={handleNewEduForm}/>
       </div>
       <div className='report'>
         <Report general={general} 

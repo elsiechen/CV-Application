@@ -10,7 +10,7 @@ export const initialGeneral = {
 export  const initialEducations = [
     { 
       id: uuid(),
-      school: 'The Odin Projectat',
+      school: 'The Odin Project',
       degree: 'Web Developer in JavaScript',
       field: 'Front-End',
       startDate: new Date(2022,2,1).toISOString().slice(0, 10),
