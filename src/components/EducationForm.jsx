@@ -23,7 +23,7 @@ export default function EducationForm(
     return (
         <div className="form">
             <div className='toggleContainer'>
-                <h3>Education</h3>
+                <h2 className='sectionTitle'>Education</h2>
                 <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
             </div>
             

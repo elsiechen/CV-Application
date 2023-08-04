@@ -20,7 +20,7 @@ export default function GeneralForm(
     return (
         <div className="form">
             <div className='toggleContainer'>
-                <h3>General Information</h3>
+                <h2 className='sectionTitle'>General Information</h2>
                 <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/>
             </div>
             {isVisible && <form>

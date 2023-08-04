@@ -142,3 +142,7 @@ hr {
     font-size: large;
     font-weight: bolder;
 }
+
+.sectionTitle {
+    color: rgb(29, 93, 155);
+}
