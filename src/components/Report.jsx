@@ -33,7 +33,7 @@ export default function Report({ general, educations, works}) {
                         </div>
                         <div className="right">
                             <div><b>{education.school}</b></div>
-                            <div>{education.degree}{'/'}{education.field}</div>
+                            <div>{education.degree}{'/ '}{education.field}</div>
                         </div>
                     </div>
                 ))}
@@ -49,6 +49,7 @@ export default function Report({ general, educations, works}) {
                         <div className="right">
                             <div><b>{work.company}</b></div>
                             <div>{work.position}</div>
+                            <br/>
                             <div>{work.description}</div>
                         </div>
                     </div>
