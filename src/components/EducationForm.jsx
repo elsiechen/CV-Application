@@ -55,7 +55,7 @@ export default function EducationForm(
                     </form>}
                 </>
             ))}
-            <button type='button' onClick={() => {
+            <button type='button' className='add' onClick={() => {
                 handleNewEduForm();
                 setIsVisible(true)}}>+ Education</button>
         </div>

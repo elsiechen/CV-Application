@@ -5,6 +5,8 @@
     padding: 0.5rem 1rem;
     margin: 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
@@ -125,4 +127,18 @@ hr {
 .deleteBtn>img {
     width:35px;
     height: auto;
+}
+
+.add {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 30%;
+    align-self: center;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    background-color: rgb(29, 93, 155);
+    color: white;
+    font-size: large;
+    font-weight: bolder;
 }
