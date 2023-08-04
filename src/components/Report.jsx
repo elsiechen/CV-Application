@@ -3,7 +3,7 @@ import emailImg from '/email.png'
 import phoneImg from '/phone.png'
 import addressImg from '/address.png'
 
-export default function Report({ general, educations}) {
+export default function Report({ general, educations, works}) {
     return (
         <div className="report-container">
             <div className="head">
@@ -38,8 +38,21 @@ export default function Report({ general, educations}) {
                     </div>
                 ))}
             </div>
-            <div className="experience">
-
+            <div className="work">
+                <div className="header">Work</div>
+                {works.map(work => (
+                    <div className="educationItem" key={work.id}>
+                        <div className="left">
+                            <div className="left">{work.startDate}{'~'}{work.endDate}</div>
+                            <div>{work.location}</div>
+                        </div>
+                        <div className="right">
+                            <div><b>{work.company}</b></div>
+                            <div>{work.position}</div>
+                            <div>{work.description}</div>
+                        </div>
+                    </div>
+                ))}
             </div>
             <div className="skill">
 

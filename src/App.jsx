@@ -129,7 +129,8 @@ function App() {
       </div>
       <div className='report'>
         <Report general={general} 
-                educations={educations}/>
+                educations={educations}
+                works={works}/>
       </div>
     </div>
   )
