@@ -9,6 +9,13 @@ function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
   const [ educations, setEducations ] = useState(initialEducations);
   
+  const handleDelete = (id) => {
+    const newEducations = educations.filter(education => {
+      return education.id !== id;
+    })
+    setEducations(newEducations);
+  }
+
   const handleChange = (e, id) => {
     e.preventDefault();
     setEducations(educations.map(education => {
@@ -47,7 +54,8 @@ function App() {
           phoneChange={(e) => setGeneral({...general, phone: e.target.value})}
           addressChange={(e) => setGeneral({...general, address: e.target.value})}/>
         <EducationForm educations={educations} 
-          handleChange={handleChange}/>
+          handleChange={handleChange}
+          handleDelete={handleDelete}/>
       </div>
       <div className='report'>
         <Report general={general} 

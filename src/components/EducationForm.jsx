@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './components.css'
 import ToggleBtn from './ToggleBtn';
-
+import deleteImg from '/delete.png'
 
 export default function EducationForm(
     {
         educations,
-        handleChange 
+        handleChange ,
+        handleDelete
     }
 ) { 
     const keyItems = ['school', 'degree', 'field', 'location'];
@@ -29,7 +30,10 @@ export default function EducationForm(
                 <>
                 <div className='toggleContainer'>
                     <h3>{education.school}</h3>
-                    {/* <ToggleBtn isVisible={isVisible} handleToggle={handleToggle}/> */}
+                    <button type="button" className='deleteBtn'
+                         onClick={(e) => handleDelete(education.id)}>
+                        <img src={deleteImg} alt="Delete button" />
+                    </button>
                 </div>
                 {isVisible && <form key={education.id}>
                     {keyItems.map(keyItem => (

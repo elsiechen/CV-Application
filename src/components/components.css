@@ -113,3 +113,10 @@ hr {
 .toggle:hover {
     cursor: pointer;
 }
+
+.deleteBtn {
+    background-color: transparent;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+}
