@@ -6,6 +6,7 @@ import EducationForm from './components/EducationForm'
 import { initialGeneral, initialEducations, initialWorks } from './components/data'
 import { v4 as uuid } from 'uuid'
 import WorkForm from './components/WorkForm'
+import { handleDownloadPDF } from './components/DownloadPDF'
 
 function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
@@ -113,6 +114,7 @@ function App() {
   return (
     <div className='container'>
       <div className='forms'>
+        <button onClick={handleDownloadPDF}>Download as PDF</button>
         <GeneralForm general={general} 
           nameChange={(e) => setGeneral({...general, fullName: e.target.value})}
           emailChange={(e) => setGeneral({...general, email: e.target.value})}

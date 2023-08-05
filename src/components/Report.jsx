@@ -5,26 +5,26 @@ import addressImg from '/address.png'
 
 export default function Report({ general, educations, works}) {
     return (
-        <div className="report-container">
+        <div className="report-container" id='report'>
             <div className="head">
                 <h1>{general.fullName}</h1>
                 <div>
                     <div className='contactDiv'>
-                        <img src={emailImg} alt="Email" />
+                        {/* <img src={emailImg} alt="Email" /> */}
                         <div>{general.email}</div>
                     </div>
                     <div className='contactDiv'>
-                        <img src={phoneImg} alt="Phone" />
+                        {/* <img src={phoneImg} alt="Phone" /> */}
                         <div>{general.phone}</div>
                     </div>
                     <div className='contactDiv'>
-                        <img src={addressImg} alt="Address" />
+                        {/* <img src={addressImg} alt="Address" /> */}
                         <div>{general.address}</div>
                     </div>
                 </div>
             </div>
             <div className="education">
-                <div className="header">Education</div>
+                <h2 className="header">Education</h2>
                 {educations.map(education => (
                     <div className="educationItem" key={education.id}>
                         <div className="left">
@@ -39,7 +39,7 @@ export default function Report({ general, educations, works}) {
                 ))}
             </div>
             <div className="work">
-                <div className="header">Work</div>
+                <h2 className="header">Work</h2>
                 {works.map(work => (
                     <div className="educationItem" key={work.id}>
                         <div className="left">
