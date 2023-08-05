@@ -7,6 +7,7 @@ import { initialGeneral, initialEducations, initialWorks } from './components/da
 import { v4 as uuid } from 'uuid'
 import WorkForm from './components/WorkForm'
 import { handleDownloadPDF } from './components/DownloadPDF'
+import githubImg from '/github.png'
 
 function App() {
   const [ general, setGeneral ] = useState(initialGeneral);
@@ -114,7 +115,13 @@ function App() {
   return (
     <div className='container'>
       <div className='forms'>
-        <button onClick={handleDownloadPDF}>Download as PDF</button>
+        <div className="form githubDiv">
+          <a href="https://github.com/elsiechen/cv-application">
+            <img id="github" src={githubImg} alt="GitHub Logo" />
+          </a>
+          <button className='add' onClick={handleDownloadPDF}>Download as PDF</button>
+        </div>
+        
         <GeneralForm general={general} 
           nameChange={(e) => setGeneral({...general, fullName: e.target.value})}
           emailChange={(e) => setGeneral({...general, email: e.target.value})}

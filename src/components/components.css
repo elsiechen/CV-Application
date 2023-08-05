@@ -151,3 +151,21 @@ hr {
 .sectionTitle {
     color: rgb(29, 93, 155);
 }
+
+#github {
+    transition: transform 1s ease;
+    width: 80px;
+    height: auto;
+  }
+  
+  #github:hover {
+    transform: rotate(365deg);
+    cursor: pointer;
+  }
+
+.githubDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
