@@ -16,7 +16,7 @@ Once you're satisfied with your CV, you can download it as a PDF file.
 
 ## Demo
 
-Check out the [**live**]() demo.
+Check out the [**live**](https://lustrous-blancmange-e6afeb.netlify.app) demo.
 
 ## Technologies Used
 
