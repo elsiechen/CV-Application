@@ -1,8 +1,38 @@
-# React + Vite
+# CV Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a CV Generator application built with React! This user-friendly tool allows you to effortlessly create a basic CV by inputting key information such as personal details, education history, and work experience. 
 
-Currently, two official plugins are available:
+As you type and update your data, the app generates an instant preview of your CV in real-time. Plus, you can add additional education and work experiences as needed. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Once you're satisfied with your CV, you can download it as a PDF file.
+![App Image](img/app.png)
+
+## Table of Contents
+
+- Demo
+- Technologies Used
+- Features
+- Credits
+
+## Demo
+
+Check out the [**live**](https://elsiechen.github.io/cv-application/) demo.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- React
+
+## Features
+
+- Use React state to manage dynamic data within a component
+- Use React props to pass data from a parent component to a child component and to configure child components
+- Use html2canvas library to convert a rendered React component into an image and use jspdf library to convert the image into a PDF
+- 
+## Credits
+
+- The Odin Project: [CV Application](https://www.theodinproject.com/lessons/node-path-react-new-cv-application)
+- Icons: [ICONS8](https://icons8.com/icons)
+
