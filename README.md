@@ -5,7 +5,7 @@ This is a CV Generator application built with React! This user-friendly tool all
 As you type and update your data, the app generates an instant preview of your CV in real-time. Plus, you can add additional education and work experiences as needed. 
 
 Once you're satisfied with your CV, you can download it as a PDF file.
-![App Image](img/app.png)
+![App Image](public/img/app.png)
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ Once you're satisfied with your CV, you can download it as a PDF file.
 
 ## Demo
 
-Check out the [**live**](https://elsiechen.github.io/cv-application/) demo.
+Check out the [**live**]() demo.
 
 ## Technologies Used
 
